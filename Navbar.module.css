@@ -1,0 +1,34 @@
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+.menuButton {
+  margin-right: 1rem;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+}
+
+.drawer {
+  width: 250px;
+}
+
+.drawerPaper {
+  width: 250px;
+}
+
+@media (max-width: 600px) {
+  .navLinks {
+    display: none;
+  }
+}

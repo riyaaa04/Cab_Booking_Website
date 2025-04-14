@@ -1,0 +1,435 @@
+.heroSection {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  padding: 30px 0;
+}
+
+.heroContent {
+  max-width: 550px;
+}
+
+.heroTitle {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.heroCar {
+  width: 100%;
+  max-width: 1300px;
+  height: 40vh;
+  animation: float 3s ease-in-out infinite;
+  margin-top: 200px;
+  margin-left: 50px;
+  transform: translate(30px, 60px);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.bookingForm {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 450px;
+  width: 100%;
+}
+
+.tripTypeSelector {
+  margin-bottom: 1rem;
+}
+
+.toggleGroup {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+  width: 100%;
+}
+
+.toggleButton {
+  flex: 1;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.toggleButton:hover,
+.toggleButton[aria-pressed='true'],
+.toggleButton.Mui-selected {
+  background: #1976d2 !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+}
+
+.toggleButton.Mui-selected {
+  background: #ffd700;
+  color: #000;
+}
+
+.formGroup {
+  margin-bottom: 0.5rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.formRow .formGroup {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+  font-size: 0.85rem;
+  height: 28px;
+}
+
+.formGroup input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.formGroup select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+.formGroup option {
+  background: #1a1a1a;
+  color: white;
+}
+
+.findButton {
+  width: 100%;
+  padding: 6px;
+  background: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  height: 32px;
+}
+
+.findButton:hover {
+  background: #ffed4a;
+  transform: translateY(-2px);
+}
+
+.featuresSection {
+  padding: 4rem 0;
+}
+
+.featureCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.featureCard.animate {
+  animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.featureCard:nth-child(1) { animation-delay: 0s; }
+.featureCard:nth-child(2) { animation-delay: 0.2s; }
+.featureCard:nth-child(3) { animation-delay: 0.4s; }
+.featureCard:nth-child(4) { animation-delay: 0.6s; }
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.routesSection {
+  background-color: white;
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.routeCard {
+  height: 100%;
+}
+
+.routeImage {
+  height: 200px;
+  object-fit: cover;
+}
+
+.findButton {
+  height: 42px;
+  padding: 0 1.5rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  min-width: 120px !important;
+  margin-left: auto !important;
+}
+
+.testimonialsSection {
+  padding: 4rem 0;
+  background: #ebeef2;
+}
+
+.testimonialCard {
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s ease;
+  border: none;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+}
+
+.testimonialHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.testimonialAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.testimonialInfo {
+  flex: 1;
+}
+
+.testimonialName {
+  font-weight: 600;
+  margin-bottom: 0.25rem !important;
+}
+
+.testimonialLocation {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.testimonialStars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1rem;
+  color: #ffc107;
+}
+
+.testimonialText {
+  color: #444;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.testimonialQuote {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: rgba(0, 0, 0, 0.05);
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.aboutSection {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+  color: white;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.aboutContent {
+  position: relative;
+  z-index: 2;
+  padding: 6rem 0;
+}
+
+.aboutTitle {
+  margin-bottom: 2rem !important;
+  font-weight: 600 !important;
+}
+
+.aboutDescription {
+  max-width: 800px;
+  margin: 0 auto 2rem !important;
+  line-height: 1.8 !important;
+}
+
+.aboutStats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem !important;
+}
+
+.statLabel {
+  font-size: 1.1rem !important;
+  opacity: 0.9;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 960px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .aboutStats {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroSection {
+    padding: 40px 0;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .aboutStats {
+    gap: 1rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+}
